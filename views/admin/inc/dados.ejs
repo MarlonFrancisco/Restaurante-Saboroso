@@ -1,0 +1,29 @@
+<!-- Main content -->
+      <section class="content container-fluid">
+
+        <div class="row">
+
+          <% for(item in resultados) { %>
+
+            <div class="col-md-3 col-sm-6 col-xs-12">
+              <div class="info-box" onclick="window.location.href = '<%= resultados[item].link %>'" style="cursor:pointer">
+                <span class="info-box-icon bg-<%= resultados[item].color %>">
+                  <i class="<%= resultados[item].icon %>"></i>
+                </span>
+
+                <div class="info-box-content">
+                  <span class="info-box-text"><%= resultados[item].name %></span>
+                  <span class="info-box-number"><%= resultados[item].data %></span>
+                </div>
+                <!-- /.info-box-content -->
+              </div>
+              <!-- /.info-box -->
+            </div>
+            <!-- /.col -->
+
+          <% }; %>
+
+        </div>
+
+      </section>
+      <!-- /.content -->
